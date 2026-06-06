@@ -1,4 +1,5 @@
 import Image from "next/image";
+import EnterOnView from "./enter-on-view";
 
 type Screenshot = {
   src: string;
@@ -39,11 +40,11 @@ export default function Screenshots() {
         </div>
 
         <ul className="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-          {screenshots.map((screenshot) => (
+          {screenshots.map((screenshot, index) => (
             <li key={screenshot.src} className="flex flex-col items-center">
-              <div className="w-full max-w-[240px] overflow-hidden rounded-[2rem] sm:max-w-[220px]">
+              <EnterOnView delayMs={index * 100} className="w-full max-w-[240px] overflow-hidden rounded-[2rem] sm:max-w-[220px]">
                 <Image src={screenshot.src} alt={screenshot.alt} width={1242} height={2688} className="h-auto w-full" />
-              </div>
+              </EnterOnView>
 
               <figcaption className="mt-6 max-w-xs text-center">
                 <p className="text-base font-bold text-zinc-800">{screenshot.captionJa}</p>

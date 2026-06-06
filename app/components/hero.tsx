@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
 
         <div className="flex w-full flex-1 justify-center lg:justify-end">
-          <Image src="/screenshot1.png" alt="Seichi アプリのホーム画面" width={1242} height={2688} className="h-auto w-full max-w-[260px] drop-shadow-2xl sm:max-w-[280px] lg:max-w-[300px]" priority />
+          <Image src="/screenshot1.png" alt="Seichi アプリのホーム画面" width={1242} height={2688} className="animate-hero-enter motion-reduce:animate-none motion-reduce:opacity-100 h-auto w-full max-w-[260px] drop-shadow-2xl sm:max-w-[280px] lg:max-w-[300px]" priority />
         </div>
       </div>
     </section>
